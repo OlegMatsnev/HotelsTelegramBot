@@ -1,0 +1,200 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;          /* внешний отступ */
+  padding: 0;         /* внутренний отступ */
+  box-sizing: border-box; /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+  font-family: 'Poppins', sans-serif; /* шрифт семейства */
+}
+body{
+  display: flex; /* https://tproger.ru/translations/how-css-flexbox-works */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;  /* минимальная высота контейнера на 100% высоты видимого окна */
+  background: #17A2B8;
+}
+::selection{ /* ::selection позволяет применить стили к части документа, который был выделен пользователем */
+  color: #fff; /* https://developer.mozilla.org/ru/docs/Web/CSS/::selection */
+  background: #17A2B8;
+}
+.wrapper{
+  height: 700px;
+  width: 400px;                                     /*  */
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 25px 40px;                          /* Installs internal outlet on top, right, bottom */
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+header h2{
+  font-size: 24px;
+  font-weight: 600;
+}
+header p{
+  margin-top: 5px;
+  font-size: 16px;
+}
+.price-input{
+  width: 100%;
+  display: flex;
+  margin: 30px 0 35px;
+}
+.price-input .field{
+  display: flex;
+  width: 100%;
+  height: 45px;
+  align-items: center;
+}
+/* Стили для input, находящегося внутри элемента с классом .field */
+.field input {
+  width: 100%;             /* Ширина input занимает 100% доступной ширины контейнера */
+  height: 100%;            /* Высота input занимает 100% доступной высоты контейнера */
+  outline: none;           /* Убирает обводку при фокусе (фокусе клавиши Tab) */
+  font-size: 19px;         /* Размер шрифта */
+  margin-left: 12px;       /* Отступ слева */
+  border-radius: 5px;      /* Радиус скругления углов */
+  text-align: center;      /* Выравнивание текста по центру */
+  border: 1px solid #999;  /* Толщина и цвет границы */
+  -moz-appearance: textfield; /* Стиль внутреннего элемента в Firefox */
+}
+
+/* Специфичные стили для стрелок у input[type="number"] в браузерах WebKit (Chrome, Safari) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Убирает стандартные стрелки у input[type="number"] в браузерах WebKit */
+}
+
+.price-input .separator{
+  width: 130px;
+  display: flex;
+  font-size: 19px;
+  align-items: center;
+  justify-content: center;
+}
+.slider{
+  height: 5px;
+  position: relative; /* смещение отно */
+  background: #ddd;
+  border-radius: 5px;
+}
+.slider .progress{
+  height: 100%;
+  left: 0%;
+  right: 0%;
+  position: absolute;
+  border-radius: 5px;
+  background: #17A2B8;
+}
+.range-input{
+  position: relative;
+}
+.range-input input{
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -5px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  background: #17A2B8;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+input[type="range"]::-moz-range-thumb{
+  height: 17px;
+  width: 17px;
+  border: none;
+  border-radius: 50%;
+  background: #17A2B8;
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+hr {
+  border-top: 2px solid blue;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+/* Style buttons */
+.btn {
+  background-color: #fff; /* Blue background */
+  border: none; /* Remove borders */
+  color: #17A2B8; /* White text */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  box-shadow: 0px 2px 10px 0px #0000FF;
+  margin: 5px;
+  padding: 10px 10px 10px 10px;
+}
+
+.btn.active {
+  color: gold;
+  background-color: gray;
+  box-shadow: 0px 2px 10px 0px gold;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+.radio-button-group {
+  border: none;
+}
+
+input[type="radio"]:hover {
+  background-color: red;
+}
+
+.radio-button-group input {
+  cursor: pointer;
+}
+
+
+
+.is-visually-hidden {
+    block-size: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+    inline-size: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+.lastGR {
+  margin-bottom: 15px;
+}
+
+input[type="submit"] {
+  background-color: #17A2B8;
+  border-radius: 40px;
+  color: white;
+  padding: 10px 30px; /* Увеличьте отступы, чтобы сделать кнопку больше */
+  text-align: center;
+  text-decoration: none;
+  display: block; /* Измените на "block", чтобы кнопка занимала всю ширину */
+  font-size: 16px;
+  margin: 0 auto; /* Центрируйте кнопку по горизонтали */
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  box-shadow: 0px 2px 20px 0px blue;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<!-- div tag explanaion https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div -->
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Price Range Slider | CodingNepal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">  <!-- Подключение css файла--->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h2>Price Range</h2>
+        <p>Цена за ночь ($)</p>
+      </header>
+      <div class="price-input">
+        <div class="field">
+          <span>Min</span>
+          <input type="number" class="input-min" value="0">
+        </div>
+        <div class="separator">-</div>
+        <div class="field">
+          <span>Max</span>
+          <input type="number" class="input-max" value="1000">
+        </div>
+      </div>
+      <div class="slider">
+        <div class="progress"></div>
+      </div>
+      <div class="range-input">
+        <input type="range" class="range-min" min="0" max="1000" value="0">
+        <input type="range" class="range-max" min="0" max="1000" value="1000">
+      </div><br>
+
+      <hr>
+
+      <header>
+        <h2>Star rating</h2>
+        <p>Выберите минимальное количество звёзд отеля (необязательно)</p>
+      </header>
+      <div class="rating">
+        <button class="btn">2 <i class="fa fa-star"></i></button>
+        <button class="btn">3 <i class="fa fa-star"></i></button>
+        <button class="btn">4 <i class="fa fa-star"></i></button>
+        <button class="btn">5 <i class="fa fa-star"></i></button>
+      </div><br>
+
+      <hr>
+
+      <header>
+        <h2>Guest rating</h2>
+        <p>Определите отели по среднему рейтингу от гостей</p>
+      </header>
+      <fieldset class="radio-button-group">
+      <legend class="is-visually-hidden">Choose </legend>
+        <div>
+          <input type="radio" name="guestRating" value="any" id="radioAny" checked>
+          <label for="radioAny">Any</label>
+        </div>
+        <div>
+          <input type="radio" name="guestRating" value="9" id="radioExcellent">
+          <label for="radioExcellent">Excellent 9+</label>
+        </div>
+        <div class="lastGR">
+          <input type="radio" name="guestRating" value="8" id="radioGood">
+          <label for="radioGood">Very good 8+</label>
+        </div>
+    </fieldset>
+
+    <hr>
+
+    <input type="submit" name="submit" value="Готово" id="ready">
+
+    </div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
